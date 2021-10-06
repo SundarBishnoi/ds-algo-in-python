@@ -88,8 +88,9 @@ tests.append({
     'output': 2
 })
 
+#linear search algorithm 
 
-def locate_cards(cards, query):
+def locate_card(cards, query):
     position = 0
 
     while position < len(cards):
@@ -99,5 +100,9 @@ def locate_cards(cards, query):
     return -1
 
 for test in tests:
-    print(locate_cards(**test['input']) == test['output'])
+    if locate_card(**test['input']) == test['output'] :
+        print('Passed')
+    else:
+        print('Failed')
+
 
